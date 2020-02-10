@@ -35,6 +35,10 @@ export AWS_SECRET_ACCESS_KEY
 AWS_SESSION_TOKEN=$(jq -r '.source.aws_session_token // ""' < "$payload")
 export AWS_SESSION_TOKEN
 
+# Optional. If set use https proxy for GKE private masters. Defaults to empty
+HTTPS_PROXY="$(jq -r '.source.https_proxy // ""' < "$payload")"
+export HTTPS_PROXY
+
 setup_kubectl "$payload"
 
 # Required. Specify the operation that you want to perform on one or more
