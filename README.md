@@ -28,6 +28,7 @@ The version of this resource corresponds to the version of kubectl. We recommend
         ...
     ```
 - `context`: *Optional.* The context to use when specifying a `kubeconfig` or `kubeconfig_file`
+- `https_proxy` *Optional* When the endpoint of a proxy for the kube master api for private cluster configs.
 
 ### cluster configs
 
